@@ -2,6 +2,19 @@
 
 NeuroCuts is a deep RL algorithm for generating optimized packet classification trees. See the [preprint](https://arxiv.org/abs/1902.10319) for an overview.
 
+## Environment Setup
+Using Conda:
+```
+conda env create -f environment.yml
+conda activate py_3710
+```
+
+Or installing dependencies directly:
+
+1. Verify that you're using Python 3.7.10 (downgrade if your version is too high).
+
+2. Run `pip install -r requirements.txt`.
+
 ## Running NeuroCuts
 
 You can train a NeuroCuts policy for the small `acl5_1k` rule set using the following command. This should converge to an memory access time of 9-10 within 50k timesteps:
