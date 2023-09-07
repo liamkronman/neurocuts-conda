@@ -242,6 +242,7 @@ class NeuroCutsEnv(MultiAgentEnv):
                     os.path.basename(self.rules_file), time_stat, space_stat,
                     time.time()))
             print("Saving tree to {}".format(out))
+            print(self.tree)
             with open(out, "wb") as f:
                 pickle.dump(self.tree, f)
 

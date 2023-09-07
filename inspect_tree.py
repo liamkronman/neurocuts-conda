@@ -4,6 +4,7 @@
 import argparse
 import pickle
 import random
+import time
 
 parser = argparse.ArgumentParser()
 
@@ -34,6 +35,7 @@ def check_classification(tree):
             if r.matches(packet):
                 expected_match = r
                 break
+        
         actual_match = tree.match(packet)
         expected_match = expected_match and tree.rules.index(expected_match)
         actual_match = actual_match and tree.rules.index(actual_match)
